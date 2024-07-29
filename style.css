@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(934px at 6% 39.5%, rgb(255, 35, 90) 0.2%, rgb(255, 35, 144) 54.8%, rgb(250, 99, 160) 93.4%);
+    font-family: Love Ya Like A Sister;
+}
+
+.container {
+    text-align: center;
+}
+
+#startScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#startScreen h1{
+    font-size: 100px;
+    margin: 0px auto;
+    text-shadow: 8px 6px 6px rgba(60, 16, 83, 0.3);
+    color: #3c1053;
+}
+
+.header{
+    animation: anime 3s  ;
+
+}
+
+@keyframes anime {
+
+    from{
+        transform: translateX(-200%);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+#playButton {
+    margin-top: 20px;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    background-color:#3c1053;
+    color: #fff;
+    animation: anibut 3s; 
+    box-shadow: 5px 12px 21px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes anibut{
+
+    from{
+        transform: translateX(600%);
+    }
+
+    to{
+        transform: translateY(0);
+    }
+}
+
+#gameScreen h1{
+    color:#3c1053 ;
+    text-shadow: 6px 3px 6px rgba(60, 16, 83, 0.2);
+
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+    
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    border-radius: 5px;
+    color: #3c1053;
+    cursor: pointer;
+    box-shadow: 5px 12px 21px rgba(0, 0, 0, 0.2);
+
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color:rgba(255, 35, 144,0.3);
+    border-radius: 5px;
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.win{
+    animation: winanime ease-in 1s infinite;
+}
+
+.draw{
+    animation: winanime ease-in 1s infinite;
+}
+
+@keyframes winanime{
+    0%{
+        background-color: #fff;
+    }
+    100%{
+        background-color: #3c1053;
+        color:rgb(255, 35, 90) ;
+    }
+} 
+
